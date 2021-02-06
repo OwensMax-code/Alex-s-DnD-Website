@@ -12,5 +12,14 @@ header {
 }
 
 #roll-button {
-    margin-right: 2rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+#roll-display {
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 30px;
 }

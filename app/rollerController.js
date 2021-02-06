@@ -16,7 +16,7 @@ app.controller("rollerController", function($scope) {
     }
 
     displayResults = (newAllMyRolls = []) => {
-        var parentDiv = document.getElementById("rollDisplay");
+        var parentDiv = document.getElementById("roll-display");
         var allMyDisplays = [];
         parentDiv.innerHTML = "";
         newAllMyRolls.forEach(rollSet => {
@@ -29,10 +29,10 @@ app.controller("rollerController", function($scope) {
     }
 
     createSingleDisplay = (newRollSet) => {
-        var allMyLines = ["First roll: ",
-                         "Second roll: ",
-                          "Third roll: ",
-                          "Fourth roll: "],
+        var allMyLines = ["1st roll: ",
+                         "2nd roll: ",
+                          "3rd roll: ",
+                          "4th roll: "],
         index = 0,
         rollSum = 0,
         rollH1Text,
@@ -53,9 +53,11 @@ app.controller("rollerController", function($scope) {
             displayDiv.appendChild(rollH1);
             index++;
         });
-        rollSumText = document.createTextNode(`Roll Sum: ${rollSum.toString()}`);
+        rollSumText = document.createTextNode(`Sum: ${rollSum.toString()}`);
         rollSumH2.appendChild(rollSumText);
         displayDiv.appendChild(rollSumH2);
+        displayDiv.classList.add("border","border-info","rounded");
+        displayDiv.style.padding = "1rem";
         return displayDiv;
     }
 
