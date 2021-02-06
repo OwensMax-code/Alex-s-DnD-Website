@@ -1,0 +1,16 @@
+body {
+    margin: 0 auto;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+header {
+    margin: 2rem;
+}
+
+#roll-button {
+    margin-right: 2rem;
+}
